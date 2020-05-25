@@ -21,7 +21,7 @@ class RepositoryMirrorsController < RedmineGitHostingController
     return unless @mirror.save
 
     flash[:notice] = l(:notice_mirror_created)
-    render_js_redirect
+    redirect_to success_url
   end
 
   def update
